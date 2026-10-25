@@ -1,0 +1,7 @@
+line_id,plant_id,line_name,family,equipment_list
+L01,P1,PET Bottle Line A,PET,Blow Molder|Filler|Capper|Labeler|Shrink Packer|Palletizer|Conveyor
+L02,P1,PET Bottle Line B,PET,Blow Molder|Filler|Capper|Labeler|Shrink Packer|Palletizer|Conveyor
+L03,P1,Cup Line,CUP,Cup Former/Sealer|Filler|Date Coder|Packer|Conveyor
+L04,P1,Gallon Line,GALLON,Gallon Washer|Filler|Capper|Conveyor
+L05,P2,UHT Aseptic Line,UHT,UHT Steriliser|Aseptic Filler|Straw Applicator|Cartoner|Palletizer
+L06,P2,Powder Canning Line,POWDER,Mixer|Can Filler|Seamer|Labeler|Checkweigher
