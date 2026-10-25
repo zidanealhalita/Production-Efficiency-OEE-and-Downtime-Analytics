@@ -36,7 +36,8 @@ if len(Q):
     with c1:
         st.plotly_chart(pareto_chart(pt, "defect_type", f"{top['defect_type']} is the top defect ({top['share']:.0%}); {vital_few(pt)} types reach 80%", "Defect type", "Defect units", unit="units", height=420), use_container_width=True)
     mix = Q.groupby(["line_id", "defect_type"])["defect_units"].sum().reset_index()
-    f = px.bar(mix, x="line_id", y="defect_units", color="defect_type", barnorm="percent", color_discrete_sequence=px.colors.qualitative.Safe + px.colors.qualitative.Set2)
+    f = px.bar(mix, x="line_id", y="defect_units", color="defect_type", barmode="stack", color_discrete_sequence=list(px.colors.qualitative.Safe) + list(px.colors.qualitative.Set2))
+    f.update_layout(barnorm="percent")
     with c2:
         st.plotly_chart(style(f, "Defect mix differs by line type: each line has its own failure modes", "Line", "Share of defect units (%)", height=420), use_container_width=True)
 
